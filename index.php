@@ -7,11 +7,11 @@
 </head>
 <body>
     <form action="login.php" method="post">
-        <label for="jmeno">Jméno:</label>
-        <input type="text" id="jmeno" name="jmeno" required><br><br>
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username"><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"><br><br>
 
         <input type="submit" value="Odeslat">
     </form>

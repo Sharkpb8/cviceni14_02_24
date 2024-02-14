@@ -1,13 +1,11 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $jmeno = $_POST["jmeno"];
-    $email = $_POST["email"];
-
-    // Vypíše přijatá data
-    echo "Jméno: " . $jmeno . "<br>";
-    echo "Email: " . $email . "<br>";
-} else {
-    // Pokud by se někdo pokusil přistupovat k tomuto skriptu přímo přes URL, můžete přesměrovat nebo zobrazit chybovou zprávu
-    echo "Přístup nepovolen!";
+session_start();
+if(empty($_POST["username"]) || empty($_POST["password"])){
+    header('Location: index.php');
+    exit();
 }
+
+$username = $_POST["username"];
+$_SESSION['username'] = $username;
+header('Location: welcome.php');
 ?>
